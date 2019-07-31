@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Abstracts/Mixin: Button Styles
+// Base button style mixin
+// @include btn-base(), @include btn(primary, secondary)
+// -----------------------------------------------------------------------------
+
+
+$btn-primary: setcolor(dark);
+$btn-primary-hover: setcolor(light);
+
+$btn-secondary: setcolor(light);
+$btn-secondary-hover: setcolor(dark);
+
+// Base button styles
+@mixin btn-base($style: primary) {
+  background-color: setcolor(medium, 40);
+}
+
+// Apply the button style and hover target
+@mixin btn(
+  $style: primary
+  ) {
+  @include btn-base($style);
+}
