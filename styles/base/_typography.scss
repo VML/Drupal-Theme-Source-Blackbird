@@ -90,7 +90,7 @@ blockquote {
 }
 
 code {
-  background-color: setcolor(medium, 20);
+  background-color: $color-light-grey;
   display: block;
   margin: $gap-vertical-sm 0 $gap-vertical-md;
   padding: 1em;

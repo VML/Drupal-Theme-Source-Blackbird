@@ -8,12 +8,12 @@
     }
 
     &:after {
-      color: setcolor(light);
+      color: $color-white;
       content: '\25C2';
       display: block;
       font-size: 4rem;
       opacity: 0.5;
-      text-shadow: 0 0 1rem setcolor(dark);
+      text-shadow: 0 0 1rem $color-black;
       transition: $transition-base;
     }
 

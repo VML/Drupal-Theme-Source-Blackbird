@@ -1,14 +1,9 @@
 // -----------------------------------------------------------------------------
-// Base
-// An import of all things base setup
+// Block: Page Title Block
 // -----------------------------------------------------------------------------
 
-@import
-'normalize',
-'base',
-'typography',
-'helpers',
-'grid',
-'button',
-'inputs',
-'slick-arrows';
+@import '../../globals';
+
+.block-page-title-block {
+  @include container();
+}

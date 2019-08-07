@@ -19,14 +19,14 @@
 
 
 @mixin link-base ($style: dark) {
-  $color: setcolor(dark);
-  $hover-color: setcolor(brand);
+  $color: $color-dark-blue;
+  $hover-color: $color-blue;
   $hover-weight: null;
 
   // Light overrides.
   @if $style == light {
-    $color: setcolor(light);
-    $hover-color: setcolor(light);
+    $color: $color-white;
+    $hover-color: $color-white;
     $hover-weight: $fw-bold;
   }
 

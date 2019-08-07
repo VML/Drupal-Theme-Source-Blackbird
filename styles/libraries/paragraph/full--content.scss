@@ -41,6 +41,10 @@
     }
   }
 
+  .component-content__media {
+    margin: 1.5em 0;
+  }
+
   .component-content__footer:empty {
     display: none;
   }
@@ -48,4 +52,20 @@
   .component-content__cta.button {
     @include btn();
   }
+
+
+  @include media('>=sm') {
+    &--media-layout-left-floated .component-content__media {
+      float: left;
+      margin-right: 1em;
+      width: 40%;
+    }
+
+    &--media-layout-right-floated .component-content__media {
+      float: right;
+      margin-left: 1em;
+      width: 40%;
+    }
+  }
+
 }

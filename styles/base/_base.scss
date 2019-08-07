@@ -20,7 +20,7 @@ body {
   @include get-typeset(paragraph);
   @include setfont($font-default);
   background-color: $body-bg-color;
-  color: setcolor(dark);
+  color: $color-black;
   font-weight: $fw-medium;
   line-height: $body-line-height;
   overflow-x: hidden;
@@ -72,13 +72,13 @@ thead:focus {
  * Basic body styles
  */
 ::-moz-selection {
-  background: setcolor(brand);
-  color: setcolor(brand);
+  background: $color-blue;
+  color: $color-blue;
 }
 
 ::selection {
-  background: setcolor(brand);
-  color: setcolor(brand);
+  background: $color-blue;
+  color: $color-blue;
 }
 
 main {
@@ -147,8 +147,8 @@ body.toolbar-loading .toolbar-tray {
 
 // Add background to node-preview container.
 .node-preview-container {
-  background: setcolor(light);
-  background: rgba(setcolor(light), 0.8);
+  background: $color-white;
+  background: rgba($color-white, 0.8);
 }
 
 // Blazy styles.

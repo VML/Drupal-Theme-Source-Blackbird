@@ -101,10 +101,10 @@
 
 // default slide content
 .component-hero-slide {
-  background-color: setcolor(dark);
+  background-color: $color-black;
 
   .component-hero-slide__inner {
-    color: setcolor(light);
+    color: $color-white;
     padding: 0 15vw;
 
     @include media('>=lg') {
@@ -157,7 +157,7 @@
   .component-hero-slide__title .component-hero-slide__title-super,
   .component-hero-slide__title .component-hero-slide__title-main,
   .component-hero-slide__inner {
-    color: setcolor(light);
+    color: $color-white;
   }
 
   .component-hero-slide__link {
@@ -173,7 +173,7 @@
   .component-hero-slide__title .component-hero-slide__title-super,
   .component-hero-slide__title .component-hero-slide__title-main,
   .component-hero-slide__inner {
-    color: setcolor(dark);
+    color: $color-black;
   }
 
   .component-hero-slide__link {

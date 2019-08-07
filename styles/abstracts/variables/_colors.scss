@@ -3,23 +3,23 @@
 // Global colors and color map
 // -----------------------------------------------------------------------------
 
-$hex-brand: #0080FF !default;
+$color-white: #FFFFFF;
+$color-lightest-grey: #EEEEEE;
+$color-light-grey: #DDDDDD;
+$color-grey: #999999;
+$color-dark-grey: #333333;
+$color-black: #000000;
+$color-blue: #0080FF;
+$color-dark-blue: #0055a9;
 
 $colors: (
-  light: (
-    base: #FFFFFF
-  ),
-  dark: (
-    base: #000000
-  ),
-  medium: (
-    base: #333333,
-    60: #999999,
-    40: #DDDDDD,
-    20: #EEEEEE
-  ),
-  brand: (
-    base: $hex-brand,
-    dark: darken($hex-brand, 10%)
-  )
+  'light': $color-white,
+  'dark': $color-black,
+  'white': $color-white,
+  'light-grey': $color-light-grey,
+  'grey': $color-grey,
+  'dark-grey': $color-dark-grey,
+  'black': $color-black,
+  'blue': $color-blue,
+  'dark-blue': $color-dark-blue
 ) !default;

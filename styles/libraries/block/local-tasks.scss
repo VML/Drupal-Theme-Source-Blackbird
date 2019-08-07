@@ -1,7 +1,8 @@
 // -----------------------------------------------------------------------------
-// Base: Local Tasks
-// Positions and link styles for local task block
+// Block: Local Tasks
 // -----------------------------------------------------------------------------
+
+@import '../../globals';
 
 .block-local-tasks-block {
   @include gap-horizontal();

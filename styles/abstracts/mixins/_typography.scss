@@ -42,9 +42,9 @@
   }
 
   @if $color == light {
-    color: setcolor(light);
+    color: $color-white;
   } @else if $color == dark {
-    color: setcolor(dark);
+    color: $color-black
   }
 
   @if $version == h1 {

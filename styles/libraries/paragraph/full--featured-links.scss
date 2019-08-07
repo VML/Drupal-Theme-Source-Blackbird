@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
 // -----------------------------------------------------------------------------
-// Libraries/Paragraph: list links
+// Libraries/Paragraph: featured links
 // -----------------------------------------------------------------------------
 
 /**
@@ -13,28 +13,28 @@
 /**
  * Component
  */
-.component-list-links {
-  .component-list-links__title {
+.component-featured-links {
+  .component-featured-links__title {
     @include type-header(h5, dark, included);
     text-transform: uppercase;
   }
 
-  .component-list-links__list {
+  .component-featured-links__list {
     list-style: none;
     padding: 0;
   }
 
-  .component-list-links__list-item {
+  .component-featured-links__list-item {
     padding-bottom: 0.5em;
     text-transform: uppercase;
   }
 
-  .component-list-links__list-item a {
+  .component-featured-links__list-item a {
     @include icon(chevron, after);
     hyphens: auto;
 
     &:after {
-      color: setcolor(brand);
+      color: $color-blue;
       font-size: 0.75em;
       margin-left: 0.25em;
       transition: $transition-base;
@@ -42,7 +42,7 @@
     }
 
     &:hover:after {
-      color: setcolor(dark);
+      color: $color-dark-blue;
     }
   }
 }

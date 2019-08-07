@@ -10,8 +10,8 @@ $sg-menu-width: 35rem;
 }
 
 .sg-menu {
-  background-color: setcolor(medium, 40);
-  color: setcolor(light);
+  background-color: $color-dark-grey;
+  color: $color-white;
   bottom: 0;
   font-size: 0.75rem;
   left: -250%;
@@ -25,8 +25,8 @@ $sg-menu-width: 35rem;
   width: $sg-menu-width;
 
   .sg-theme-name {
-    background-color: setcolor(medium);
-    color: setcolor(light);
+    background-color: $color-grey;
+    color: $color-white;
     margin-bottom: 0;
   }
 }
@@ -116,8 +116,8 @@ $sg-menu-width: 35rem;
 }
 
 .sg-theme-name {
-  background-color: setcolor(medium, 20);
-  border-left: 1rem solid setcolor(brand);
+  background-color: $color-dark-grey;
+  border-left: 1rem solid $color-blue;
   padding: 0.75em 1em;
   font-weight: bold;
   margin: $gap-vertical-sm 0 $gap-vertical-md;

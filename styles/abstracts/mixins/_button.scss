@@ -5,15 +5,15 @@
 // -----------------------------------------------------------------------------
 
 
-$btn-primary: setcolor(dark);
-$btn-primary-hover: setcolor(light);
+$btn-primary: $color-black;
+$btn-primary-hover: $color-white;
 
-$btn-secondary: setcolor(light);
-$btn-secondary-hover: setcolor(dark);
+$btn-secondary: $color-white;
+$btn-secondary-hover: $color-black;
 
 // Base button styles
 @mixin btn-base($style: primary) {
-  background-color: setcolor(medium, 40);
+  background-color: $color-grey;
 }
 
 // Apply the button style and hover target
