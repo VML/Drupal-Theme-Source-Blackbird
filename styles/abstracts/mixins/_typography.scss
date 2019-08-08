@@ -44,7 +44,7 @@
   @if $color == light {
     color: $color-white;
   } @else if $color == dark {
-    color: $color-black
+    color: $color-black;
   }
 
   @if $version == h1 {
