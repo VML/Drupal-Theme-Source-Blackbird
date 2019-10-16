@@ -9,12 +9,13 @@
 // -----------------------------------------------------------------------------
 
 @mixin icon-font-face() {
+  $cachebuster: unique_id();
   @font-face {
     font-family: "themeIcons";
-    src: url('themes/custom/blackbird//fonts/iconsthemeIcons.eot');
-    src: url('themes/custom/blackbird//fonts/iconsthemeIcons.ttf') format('truetype'),
-    url('themes/custom/blackbird//fonts/iconsthemeIcons.eot?#iefix') format('eot'),
-    url('themes/custom/blackbird//fonts/iconsthemeIcons.woff') format('woff');
+    src: url('/themes/custom/blackbird/fonts/icons/themeIcons.eot?#{$cachebuster}');
+    src: url('/themes/custom/blackbird/fonts/icons/themeIcons.ttf?#{$cachebuster}') format('truetype'),
+    url('/themes/custom/blackbird/fonts/icons/themeIcons.eot?#{$cachebuster}#iefix') format('eot'),
+    url('/themes/custom/blackbird/fonts/icons/themeIcons.woff?#{$cachebuster}') format('woff');
   }
 }
 
@@ -53,8 +54,16 @@
       $char: "\E004";
     }
   
-    @if $filename == twitter {
+    @if $filename == logo {
       $char: "\E005";
+    }
+  
+    @if $filename == menu {
+      $char: "\E006";
+    }
+  
+    @if $filename == twitter {
+      $char: "\E007";
     }
   
 
@@ -81,6 +90,10 @@ $icons: (
     instagram: instagram,
   
     linkedin: linkedin,
+  
+    logo: logo,
+  
+    menu: menu,
   
     twitter: twitter,
   

@@ -4,21 +4,39 @@
 // @include btn-base(), @include btn(primary, secondary)
 // -----------------------------------------------------------------------------
 
-
-$btn-primary: $color-black;
-$btn-primary-hover: $color-white;
-
-$btn-secondary: $color-white;
-$btn-secondary-hover: $color-black;
-
 // Base button styles
-@mixin btn-base($style: primary) {
-  background-color: $color-grey;
+@mixin btn-base() {
+  background-color: $color-white;
+  border-color: $color-dark-grey;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2em;
+  color: $color-dark-grey;
+  display: inline-block;
+  font-family: $font-default;
+  font-weight: $fw-bold;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 0.5em 1.75em 0.35em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color-blue;
+  }
 }
 
 // Apply the button style and hover target
-@mixin btn(
-  $style: primary
-  ) {
-  @include btn-base($style);
+@mixin btn($style: primary, $color: $color-dark-grey, $globals: included) {
+  @if $globals == included {
+    @include btn-base();
+  }
+
+  @if $style == custom {
+    border-color: $color;
+
+    &:hover {
+      color: $color;
+    }
+  }
 }

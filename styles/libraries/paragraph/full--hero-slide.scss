@@ -14,8 +14,8 @@
  * Component
  */
 .component-hero-slide,
-.component-hero-slide.slick-slide {
-  // The "!important" tags are set to override slick-slider styles.
+.component-hero-slide.swiper-slide {
+  // The "!important" tags are set to override swiper-slider styles.
   @include flex();
   height: $component-hero-title-height;
   max-height: $component-hero-title-height-max;

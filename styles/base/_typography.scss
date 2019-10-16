@@ -19,22 +19,8 @@ h6,
 }
 
 h1,
-.type-header--h1,
-.page-title {
+.type-header--h1 {
   @include type-header(h1);
-}
-
-.page-title {
-  margin-bottom: 0;
-}
-
-// smaller page title on article, case-study, and location pages
-.page-node-type-article,
-.page-node-type-case-study,
-.page-node-type-location {
-  .page-title {
-    @include type-header(h2);
-  }
 }
 
 h2,
@@ -67,12 +53,7 @@ a {
 }
 
 p {
-  margin: 0;
-  padding: 0.75em 0;
-
-  @include media('>md') {
-    padding: 1em 0;
-  }
+  margin: 0 0 1.5em;
 
   a {
     @include link-underline(full);

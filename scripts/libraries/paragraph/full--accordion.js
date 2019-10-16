@@ -73,6 +73,8 @@
             $accordionContent
               .attr('aria-hidden', (open) ? 'true' : 'false')
               .attr('hidden', open);
+
+            Drupal.blazy.init.revalidate();
           }
         });
       });

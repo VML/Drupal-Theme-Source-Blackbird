@@ -13,12 +13,13 @@
 }
 
 html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-size: $html-font-size;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  @include get-typeset(paragraph);
-  @include setfont($font-default);
   background-color: $body-bg-color;
   color: $color-black;
   font-weight: $fw-medium;
@@ -51,20 +52,9 @@ html {
 }
 
 /**
- * Remove focus outline from all block and container elements by default.
+ * Remove focus outline from all elements if not keyboard activated.
  */
-article:focus,
-details:focus,
-div:focus,
-header:focus,
-main:focus,
-figure:focus,
-figcaption:focus,
-section:focus,
-summary:focus,
-table:focus,
-tbody:focus,
-thead:focus {
+body:not(.keyboard-activated) *:focus {
   outline: none;
 }
 
@@ -79,10 +69,6 @@ thead:focus {
 ::selection {
   background: $color-blue;
   color: $color-blue;
-}
-
-main {
-  outline: none;
 }
 
 // height for page wrappers so the site spans the full height of the window
@@ -149,31 +135,4 @@ body.toolbar-loading .toolbar-tray {
 .node-preview-container {
   background: $color-white;
   background: rgba($color-white, 0.8);
-}
-
-// Blazy styles.
-// @todo move these to be automatically attached with blazy styles.
-.b-error {
-  opacity: 1;
-}
-
-.media--blazy.media--loading::before {
-  -webkit-animation: blazyLoading 2s infinite ease;
-  animation: blazyLoading 2s infinite ease;
-  background: url(asset-path('icon', 'icon-32x32.png'));
-  background-size: contain;
-  filter: blur(.1em);
-  opacity: .7;
-}
-
-@keyframes blazyLoading {
-  0%,
-  30% {
-    transform: rotate(0deg);
-  }
-
-  70%,
-  100% {
-    transform: rotate(360deg);
-  }
 }

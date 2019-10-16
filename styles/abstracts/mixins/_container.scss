@@ -8,22 +8,28 @@
 // • $breakpoint(value = breakpoint variable) - default = $md - breakpoint trigger
 // -----------------------------------------------------------------------------
 
+
 @mixin container(
   $width: $container-xl,
-  $breakpoint: md,
+  $margin: 1rem,
   $align: center,
-  $gap-reset: false,
   $reset: false
 ) {
-
-  @include media('>#{$breakpoint}') {
+  @if $reset == true {
+    margin-left: inherit !important;
+    margin-right: inherit !important;
+    max-width: inherit;
+    width: inherit;
+  } @else {
     max-width: $width;
-    width: 100%;
 
-    @if $align == center {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    } @else if $align == left {
+    @if $margin != 0 {
+      width: calc(100% - #{(2 * $margin)});
+    } @else {
+      width: 100%;
+    }
+
+    @if $align == left {
       margin-right: auto !important;
     } @else if $align == right {
       margin-left: auto !important;
@@ -31,32 +37,20 @@
       margin-left: auto !important;
       margin-right: auto !important;
     }
-
-    @if $gap-reset == true {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-
-    @if $reset == true {
-      margin-left: inherit !important;
-      margin-right: inherit !important;
-      max-width: inherit;
-      width: inherit;
-    }
   }
 }
 
 @mixin container-full-width($reset: false) {
-  left: calc(-50vw + 50%);
-  max-width: none;
-  position: relative;
-  width: 100%;
-  width: 100vw;
-
   @if $reset == true {
     left: inherit;
     max-width: inherit;
     position: inherit;
-    width: inherit;
+    width: 100%;
+  } @else {
+    left: calc(-50vw + 50%);
+    max-width: none;
+    position: relative;
+    width: 100%;
+    width: 100vw;
   }
 }

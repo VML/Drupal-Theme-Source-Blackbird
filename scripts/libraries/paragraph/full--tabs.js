@@ -62,6 +62,8 @@
 
           $panels.prop('hidden', true);
           $panels.filter('#' + $tab.attr('aria-controls')).prop('hidden', false);
+
+          Drupal.blazy.init.revalidate();
         });
 
       });
